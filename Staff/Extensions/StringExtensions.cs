@@ -6,7 +6,7 @@
 
         public static string TrimOrNull(this string value)
         {
-            var trimmedValue = value?.Trim();
+            var trimmedValue = value?.Trim(' ', '\n', '\t', '\r', '\0');
             return trimmedValue.IsNullOrEmpty()
                 ? null
                 : trimmedValue;
